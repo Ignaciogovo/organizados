@@ -11,18 +11,95 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Organizados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="container bg-dark text-light p-2 mb-5" style="width: 100%;">
-        <h1>Bienvenido al panel de organizacion de limpieza</h1>
-    </header>
+    <section class="tamañofondo">
+        <header class="bg-dark text-light p-2 w-100">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <!-- <a class="navbar-brand" href="#">Navbar w/ text</a> -->
+                    <span class="navbar-text ms-5">
+                        <h1>Bienvenido al panel de organizacion de limpieza</h1>
+                    </span>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Iniciar Sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">disabled</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-6">
+                </div>
+            </div>
+        </header>
+        <div class="row align-items-center justify-content-center h-75 w-100">
+            <form class="col-sm-6 m-auto"action="ordenlimpieza/index.php" method="post">
+                <select class="form-select form-select-lg m-auto mb-3 w-50" aria-label=".form-select-lg example">
+                    <option selected value="user1">user1</option>
+                    <option value="user2">user2</option>
+                    <option value="3">user3</option>
+                </select>
+                <div class="form-group w-50 m-auto mt-5">
+                    <input type="submit" class="btn btn-secondary w-20" value="Acceder">
+                    <input type="reset" class="btn btn-secondary w-20 float-end" value="Reset">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="text-center bg-light">
+        <div class="row pt-5 g-0">
+            <!-- <div class="col-12 p-5">
+                    <p class="text-dark">
 
-    <select class="form-select form-select-lg mb-3 w-50" aria-label=".form-select-lg example">
-        <option selected value="user1">user1</option>
-        <option value="user2">user2</option>
-        <option value="3">user3</option>
-    </select>
+                      </p>
+                </div> -->
+            <div class="col-12">
+                <div class="row text-dark g-0">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-12 pb-4">
+                                <h6>Enlaces</h6>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://github.com/Pollitodetroya" class="text-dark">github</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://po.ta.to/" class="text-dark">twitter</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://po.ta.to/" class="text-dark">linkedln</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5 bg-secondary">
+                <div class="">
+                    © 2022 Copyright:
+                    <a class="text-white" href="https://github.com/Pollitodetroya">Pollitodetroya</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
