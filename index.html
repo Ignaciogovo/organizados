@@ -19,7 +19,7 @@
 
 <body>
     <section class="tamañofondo">
-        <header class="bg-dark text-light p-2 w-100">
+        <header class="bg-dark text-light w-100 p-2">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!-- <a class="navbar-brand" href="#">Navbar w/ text</a> -->
@@ -47,15 +47,17 @@
             </div>
         </header>
         <div class="row align-items-center justify-content-center h-75 w-100">
-            <form class="col-sm-6 m-auto"action="ordenlimpieza/index.php" method="post">
-                <select class="form-select form-select-lg m-auto mb-3 w-50" aria-label=".form-select-lg example">
+            <form class="col-sm-6" action="ordenlimpieza/index.php" method="post">
+                <select class="form-select form-select-lg ms-2 m-auto mb-3 w-sm-50" name="usuario" >
                     <option selected value="user1">user1</option>
                     <option value="user2">user2</option>
                     <option value="3">user3</option>
                 </select>
-                <div class="form-group w-50 m-auto mt-5">
-                    <input type="submit" class="btn btn-secondary w-20" value="Acceder">
-                    <input type="reset" class="btn btn-secondary w-20 float-end" value="Reset">
+                <div class="form-group w-sm-50 m-auto mt-5">
+                    <input type="submit" class="btn btn-secondary m-auto mb-4 d-flex align-items-start float-md-start"
+                        value="Acceder">
+                    <input type="reset" class="btn btn-secondary d-flex align-items-end m-auto float-md-end"
+                        value="Reset">
                 </div>
             </form>
         </div>
@@ -77,13 +79,13 @@
                             <div class="col-12 pb-4">
                                 <h6>Enlaces</h6>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-4 m-auto">
                                 <a href="https://github.com/Pollitodetroya" class="text-dark">github</a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-4 m-auto">
                                 <a href="https://po.ta.to/" class="text-dark">twitter</a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-4 m-auto">
                                 <a href="https://po.ta.to/" class="text-dark">linkedln</a>
                             </div>
                         </div>
