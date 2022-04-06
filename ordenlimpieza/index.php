@@ -11,20 +11,21 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Organizados</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="organizados/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
-    <section class="tamañofondo">
+    <section class="vh-100">
         <header class="bg-dark text-light w-100 p-2">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!-- <a class="navbar-brand" href="#">Navbar w/ text</a> -->
                     <span class="navbar-text ms-5">
-                        <h1>Organizador de limpieza</h1>
+                        <h1>Organizacion de limpieza</h1>
                     </span>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
@@ -46,14 +47,23 @@
                 </div>
             </div>
         </header>
-        <div class="row align-items-center justify-content-center h-75 w-100">
-            <div>
-                <h1>Tu calendario:</h1>
-            </div>
-        <?php 
-            $usuario = $_POST["usuario"];
-            echo $usuario;
-        ?>
+        <div class="text-center">
+
+<?php
+$usuario = $_POST["usuario"];
+echo $usuario;
+
+$usuarios=array("user1","user2","user3");
+$ubicaciones=array("Cocina","Baño","Salón");
+$contador = 0;
+while($contador < 10){
+    $temporal=array_shift($ubicaciones);
+    array_push($ubicaciones,$temporal);
+    echo "----contador  $contador -----<br> ";
+    print_r($ubicaciones);
+    $contador = $contador+1;
+}
+?>
         </div>
     </section>
     <!-- footer -->
