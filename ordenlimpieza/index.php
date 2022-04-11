@@ -5,19 +5,20 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <title>Organizados</title>
-    <link rel="stylesheet" href="organizados/style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
-
+<?php
+include "funciones.php";
+$usuario = $_POST["usuario"];
+$tareas = devolverdatos($usuario);
+?>
 <body>
     <section class="vh-100">
         <header class="bg-dark text-light w-100 p-2">
@@ -30,13 +31,13 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Iniciar Sesión</a>
+                                <a class="active link-warning" aria-current="page" href="#">Iniciar Sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">disabled</a>
+                                <a class="m-3 link-warning" href="#">disabled</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">disabled</a>
+                                <a class="link-warning" href="#">disabled</a>
                             </li>
                         </ul>
                     </div>
@@ -47,50 +48,48 @@
                 </div>
             </div>
         </header>
-        <div class="text-center">
-
+        <div class="row d-flex justify-content-center text-center w-75 m-auto mt-5">
+            <div class="col-12">
+                <p>
+                    Esta semana te toca:
 <?php
-$usuario = $_POST["usuario"];
-echo $usuario;
-
-$usuarios=array("user1","user2","user3");
-$ubicaciones=array("Cocina","Baño","Salón");
-$contador = 0;
-while($contador < 10){
-    $temporal=array_shift($ubicaciones);
-    array_push($ubicaciones,$temporal);
-    echo "----contador  $contador -----<br> ";
-    print_r($ubicaciones);
-    $contador = $contador+1;
-}
+echo "<b>".$tareas[0]."</b>";
 ?>
+                </p>
+            </div>
+            <div class="col-12">
+                <p>
+                    La próxima semana te toca:
+<?php
+echo "<b>".$tareas[1]."</b>";
+?>
+                </p>
+            </div>
+            <div class="col-12">
+                <a class="link-warning" href="../index.html">Volver atras</a>
+            </div>
         </div>
     </section>
     <!-- footer -->
     <footer class="text-center bg-light">
         <div class="row pt-5 g-0">
-            <!-- <div class="col-12 p-5">
-                    <p class="text-dark">
-
-                      </p>
-                </div> -->
             <div class="col-12">
-                <div class="row text-dark g-0">
+                <div class="row g-0">
                     <div class="col-4">
                     </div>
                     <div class="col-4">
                         <div class="row">
-                            <div class="col-12 pb-4">
+                            <div class="col-12 pb-4 text-dark">
                                 <h6>Enlaces</h6>
                             </div>
                             <div class="col-12 col-sm-4 m-auto">
-                                <a href="https://github.com/Pollitodetroya" class="text-dark">github</a>
+                                <a href="https://github.com/Pollitodetroya" class="link-warning">github</a>
                             </div>
                             <div class="col-12 col-sm-4 m-auto">
-                                <a href="https://po.ta.to/" class="text-dark">twitter</a>
+                                <a href="https://po.ta.to/" class="link-warning">twitter</a>
                             </div>
                             <div class="col-12 col-sm-4 m-auto">
-                                <a href="https://po.ta.to/" class="text-dark">linkedln</a>
+                                <a href="https://po.ta.to/" class="link-warning">linkedln</a>
                             </div>
                         </div>
                     </div>
@@ -99,9 +98,8 @@ while($contador < 10){
                 </div>
             </div>
             <div class="col-12 mt-5 bg-secondary">
-                <div class="">
-                    © 2022 Copyright:
-                    <a class="text-white" href="https://github.com/Pollitodetroya">Pollitodetroya</a>
+                <div class="text-light">© 2022 Copyright:
+                    <a class="link-warning" href="https://github.com/Pollitodetroya">Pollitodetroya</a>
                 </div>
             </div>
         </div>
@@ -122,3 +120,12 @@ while($contador < 10){
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+

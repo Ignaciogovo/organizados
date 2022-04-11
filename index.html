@@ -29,13 +29,13 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Iniciar Sesión</a>
+                                <a class="active link-warning" aria-current="page" href="#">Iniciar Sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">disabled</a>
+                                <a class="m-3 link-warning" href="#">disabled</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">disabled</a>
+                                <a class="link-warning" href="#">disabled</a>
                             </li>
                         </ul>
                     </div>
@@ -48,16 +48,17 @@
         </header>
         <div class="row align-items-center justify-content-center h-75 w-100">
             <form class="col-sm-6" action="ordenlimpieza/index.php" method="post">
-                <select class="form-select form-select-lg ms-2 m-auto mb-3 w-sm-50" name="usuario" >
+                <select class="form-select form-select-lg ms-2 m-auto mb-3 w-sm-50" name="usuario">
                     <option selected value="user1">user1</option>
                     <option value="user2">user2</option>
-                    <option value="3">user3</option>
+                    <option value="user3">user3</option>
                 </select>
-                <div class="form-group w-sm-50 m-auto mt-5">
-                    <input type="submit" class="btn btn-secondary m-auto mb-4 d-flex align-items-start float-md-start"
-                        value="Acceder">
-                    <input type="reset" class="btn btn-secondary d-flex align-items-end m-auto float-md-end"
-                        value="Reset">
+                <div
+                    class="form-group w-sm-50 p-sm-5 d-flex align-content-sm-around justify-content-center ms-2 m-auto mt-5">
+                    <input type="submit" class="btn-lg btn-secondary m-auto" value="Acceder">
+                    <!--d-flex align-items-center float-md-start-->
+                    <input type="reset" class="btn-lg btn-secondary  m-auto" value="Reset">
+                    <!-- d-flex align-items-center float-md-end -->
                 </div>
             </form>
         </div>
@@ -65,28 +66,23 @@
     <!-- footer -->
     <footer class="text-center bg-light">
         <div class="row pt-5 g-0">
-            <!-- <div class="col-12 p-5">
-                    <p class="text-dark">
-
-                      </p>
-                </div> -->
             <div class="col-12">
-                <div class="row text-dark g-0">
+                <div class="row g-0">
                     <div class="col-4">
                     </div>
                     <div class="col-4">
                         <div class="row">
-                            <div class="col-12 pb-4">
+                            <div class="col-12 pb-4 text-dark">
                                 <h6>Enlaces</h6>
                             </div>
                             <div class="col-12 col-sm-4 m-auto">
-                                <a href="https://github.com/Pollitodetroya" class="text-dark">github</a>
+                                <a href="https://github.com/Pollitodetroya" class="link-warning">github</a>
                             </div>
                             <div class="col-12 col-sm-4 m-auto">
-                                <a href="https://po.ta.to/" class="text-dark">twitter</a>
+                                <a href="https://po.ta.to/" class="link-warning">twitter</a>
                             </div>
                             <div class="col-12 col-sm-4 m-auto">
-                                <a href="https://po.ta.to/" class="text-dark">linkedln</a>
+                                <a href="https://po.ta.to/" class="link-warning">linkedln</a>
                             </div>
                         </div>
                     </div>
@@ -95,9 +91,8 @@
                 </div>
             </div>
             <div class="col-12 mt-5 bg-secondary">
-                <div class="">
-                    © 2022 Copyright:
-                    <a class="text-white" href="https://github.com/Pollitodetroya">Pollitodetroya</a>
+                <div class="text-light">© 2022 Copyright:
+                    <a class="link-warning" href="https://github.com/Pollitodetroya">Pollitodetroya</a>
                 </div>
             </div>
         </div>
